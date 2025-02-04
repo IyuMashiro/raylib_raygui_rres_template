@@ -54,9 +54,7 @@ int main(void)
     chunkInfo.type[3] = 'E';         // Resource chunk type (FourCC)
    
     //Resource chunk identifier (generated from filename CRC32 hash)
-    char bufferPath[2048] = "../asset/Gloomwood.wav";
-    unsigned char* path = reinterpret_cast<unsigned char *>(bufferPath);
-    chunkInfo.id = rresComputeCRC32(path, strlen("../asset/Gloomwood.wav"));
+    chunkInfo.id = rresComputeCRC32("../asset/Gloomwood.wav", strlen("../asset/Gloomwood.wav"));
 
     chunkInfo.compType = RRES_COMP_NONE,     // Data compression algorithm
     chunkInfo.cipherType = RRES_CIPHER_NONE, // Data encription algorithm
@@ -79,7 +77,7 @@ int main(void)
     buffer = LoadDataBuffer(chunkData, rawSize);
     
     // Compute data chunk CRC32 (propCount + props[] + data)
-    chunkInfo.crc32 = rresComputeCRC32(buffer, chunkInfo.packedSize);
+    //chunkInfo.crc32 = rresComputeCRC32(buffer, chunkInfo.packedSize);
 
     // Write resource chunk into rres file
     fwrite(&chunkInfo, sizeof(rresResourceChunkInfo), 1, rresFile);
