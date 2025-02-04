@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.20)
 
 #指定项目名称
-project(sol)
+project(your_projectName)
 #指定C++标准
 set(CMAKE_CXX_STANDARD 20)
 

@@ -115,7 +115,7 @@ int main(void)
     UnloadMusicStream(music);   // Unload music stream data
 
 
-    InitWindow(400, 200, "Sol plan test");
+    InitWindow(400, 200, "template test");
     SetTargetFPS(60);
 
     bool showMessageBox = false;
@@ -133,7 +133,7 @@ int main(void)
             if (showMessageBox)
             {
                 int result = GuiMessageBox((Rectangle){ 85, 70, 250, 100 },
-                    "#191#Message Box", "Hi! This is SolPlan!", "just test");
+                    "#191#Message Box", "Hi! This is testTemplate!", "just test");
 
                 if (result >= 0) showMessageBox = false;
             }
