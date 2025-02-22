@@ -82,8 +82,6 @@ option(SUPPORT_FILEFORMAT_FLAC "FLAC Support" TRUE)
 option(SUPPORT_FILEFORMAT_XM "XM Support" TRUE)
 option(SUPPORT_FILEFORMAT_MOD "MOD Support" TRUE)
 
-file(COPY ${PROJECT_SOURCE_DIR}/include/rres/rres-raylib.h DESTINATION ${rres_SOURCE_DIR}/src)
-
 # Our Project
 add_executable(${PROJECT_NAME} ${SRC})
 #set(raylib_VERBOSE 1)
